@@ -4,4 +4,4 @@
     <li>Add html pages for each section we will have</li>
     <li>Implement the gps navigation</li>
     <li>Add a 'My stats' section</li>
-    <li>Add a feature to reserve a bike,also show avaliable bikes in area and current free spaces in all parking center</li>
+    <li>Add a feature to reserve a bike,also show avaliable bikes in area and current free spaces in all parking centers</li>
