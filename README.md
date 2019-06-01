@@ -1,5 +1,5 @@
 # bikeApp
-<h1> A app that helps you find and rent a bike in your area<h1>
+<h1> A app that helps you find and rent a bike in your area</h1>
   <ul><b>TODO list:</b><ul>
     <li>Add html pages for each section we will have</li>
     <li>Implement the gps navigation</li>
