@@ -1,20 +1,7 @@
 
-body:before {
-	background-image: url("../images/login_page_background.jpg");
-	content: '';
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	background-position: center;
-  	background-repeat: no-repeat;
-  	background-size: cover;
-	-webkit-filter: blur(5px);
-     -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-     filter: blur(5px);
-     z-index: -9;
- }
+body{
+	background-color: 
+}
 
 *{
     margin:0;
@@ -24,13 +11,21 @@ html, body{
     height:100%;
 }
 
+.top_banner{
+	mix-blend-mode: multiply;
+	position: relative;
+  	left:-10px;
+  	top:-100px;
+  	padding: 5px;
+  	width: 400px;
+}
 
 
 .logo_img {	
 	mix-blend-mode: multiply;
 	position: relative;
   	left:400px;
-  	top:100px;
+  	top:150px;
   	padding: 5px;
   	width: 400px;
 }
