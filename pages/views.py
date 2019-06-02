@@ -10,3 +10,6 @@ def home_view(request,*args, **kwargs):
 
 def contact_view(request,*args, **kwargs):
     return render(request,'Contact/contact.html',{})
+
+def login_view(request,*args,**kwargs):
+    return render(request,'Login/login_page.html',{})
