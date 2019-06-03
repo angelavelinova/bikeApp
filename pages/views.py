@@ -13,3 +13,6 @@ def contact_view(request,*args, **kwargs):
 
 def login_view(request,*args,**kwargs):
     return render(request,'Login/login_page.html',{})
+
+def start_page_view(request,*args, **kwargs):
+    return render(request,'StartPage/start_page.html',{})
