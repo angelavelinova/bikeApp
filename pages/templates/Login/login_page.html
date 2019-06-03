@@ -49,11 +49,11 @@ body {
 }
 </style>
 
-<button class="btn" type="submit"><a href="http://127.0.0.1:8088/start_page/">Back</a></button>
+<button class="btn" type="submit"><a href="http://127.0.0.1:8080/start_page/">Back</a></button>
 <form method="post">
 {% csrf_token %}
 {{form.as_p}}
-<button  class="btn" type="submit" value="Log in"><a href="http://127.0.0.1:8088/profile/">Log in</a></button>
+<button  class="btn" type="submit" value="Log in"><a href="http://127.0.0.1:8080/profile/">Log in</a></button>
 
 </form>
 {% endblock %}
