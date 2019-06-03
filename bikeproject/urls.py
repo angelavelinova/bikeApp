@@ -17,8 +17,14 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views
 
-from pages.views import home_view, contact_view, start_page_view, login_view, signup
-from bike.views import bike_view_details, bike_creat_form
+from pages.views import (home_view,
+	contact_view,
+	start_page_view,
+	login_view,
+	signup,
+	profile_view) #profile_dynamic_view
+from bike.views import (bike_view_details,
+	bike_creat_form)
 
 
 urlpatterns = [
@@ -30,6 +36,8 @@ urlpatterns = [
 	path('signup/',signup),
 	path('bike_details/',bike_view_details),
 	path('bike_form/',bike_creat_form),
+	path('profile/', profile_view, name='profile'),
+	#path('profile/<str:user>/', profile_dynamic_view, name='profile2'),  #don't need for now
 
 ]
 

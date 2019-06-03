@@ -1,7 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render
 from django.template import loader
-from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views import generic
 
@@ -10,6 +8,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from .forms import SignUpForm
 
+from django.contrib.auth.models import User
 from django.contrib.auth.views import login
 from django.contrib.auth.forms import AuthenticationForm
 
@@ -36,7 +35,7 @@ def signup(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            return redirect('home')
+            return redirect('profile')
     else:
         form = SignUpForm()
     return render(request, 'signUp/signup.html', {'form': form})
@@ -47,7 +46,15 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('/Profile/profile')
+            return redirect('profile')
+            #return redirect('profile2', user=user)
     else:
         form = AuthenticationForm()
     return render(request, 'Login/login_page.html', {'form': form})
+
+def profile_view(request):
+    return render(request, 'Profile/profile.html', {})
+
+#it works but it's not needed, it makes page for every profile in the database
+#def profile_dynamic_view(request, user):
+#    return render(request, 'Profile/profile.html', {'user':user})
