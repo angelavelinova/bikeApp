@@ -28,7 +28,7 @@ def _deactivate(args):
 _deactivate(["nondestructive"])
 aliases["deactivate"] = _deactivate
 
-$VIRTUAL_ENV = r"/home/angela/BikeProject"
+$VIRTUAL_ENV = r"/home/angela/bikeApp"
 
 $_OLD_VIRTUAL_PATH = $PATH
 $PATH = $PATH[:]
