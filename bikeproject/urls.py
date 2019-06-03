@@ -22,7 +22,9 @@ from pages.views import (home_view,
 	start_page_view,
 	login_view,
 	signup,
-	profile_view) #profile_dynamic_view
+	profile_view,
+	data_view,
+	marshrutes_view) #profile_dynamic_view
 from bike.views import (bike_view_details,
 	bike_creat_form)
 
@@ -37,6 +39,8 @@ urlpatterns = [
 	path('bike_details/',bike_view_details),
 	path('bike_form/',bike_creat_form),
 	path('profile/', profile_view, name='profile'),
+	path('marshrutes/', marshrutes_view, name='marshrutes'),
+	path('data/', data_view, name='data'),
 	#path('profile/<str:user>/', profile_dynamic_view, name='profile2'),  #don't need for now
 
 ]

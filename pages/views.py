@@ -55,6 +55,13 @@ def login_view(request):
 def profile_view(request):
     return render(request, 'Profile/profile.html', {})
 
+def data_view(request):
+    return render(request, 'Data/data.html', {})
+
+def marshrutes_view(request):
+    return render(request, 'Marshrutes/marshrutes.html', {})
+
+
 #it works but it's not needed, it makes page for every profile in the database
 #def profile_dynamic_view(request, user):
 #    return render(request, 'Profile/profile.html', {'user':user})
