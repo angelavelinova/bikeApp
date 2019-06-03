@@ -20,7 +20,6 @@ def home_view(request,*args, **kwargs):
 def contact_view(request,*args, **kwargs):
     return render(request,'Contact/contact.html',{})
 
-
 def start_page_view(request,*args, **kwargs):
     return render(request,'StartPage/start_page.html',{})
 
@@ -38,6 +37,5 @@ def signup(request):
         form = SignUpForm()
     return render(request, 'signUp/signup.html', {'form': form})
 
-def login_view(request):
-     return render(request, 'Login/login_page.html', {})
-    
+def login_view(request,*args,**kwargs):
+    return render(request,'Login/login_page.html',{})

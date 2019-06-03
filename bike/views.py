@@ -25,3 +25,4 @@ def bike_view_details(request):
     }
 
     return render(request,'bike_details.html',context)
+
