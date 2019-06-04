@@ -4,6 +4,7 @@
 
 {% block content %}
 <html>
+<link href="avatar.css" rel="stylesheet">
 	<head>
 	<meta charset="utf-8">
 	<title> Rent a bike </title>
@@ -27,12 +28,19 @@
 			padding: 5px;
 
 		}
+		.avatar {
+		  <!--vertical-align: middle;
+		  width: 50px;
+		  height: 50px;
+		  border-radius: 50%;-->
+		  margin-left:0px;
+		}
 		.map1{
 			margin-left:200px;	 
 		}
 		
 		#header{
-			background-color: #5c755e;
+			background-color: #557A95;
 			margin: 10px;
 			height:90px;
 			border-radius: 5px;
@@ -60,7 +68,7 @@
 			background-color: white;
 		}
 		.main{
-			background-color: #e5e4d7;
+			background-color: #83AAC7;
 			margin-top: 100px;
 			margin-left: 10px;
 			margin-right: 10px;
@@ -88,26 +96,36 @@
 	</div>
 	<div id="navbar">	
 		<ul>
-			<li><a href="personal_information.html">Personal information</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="contacts.html">Contacts</a></li>
-			<li><a href="founders.html">Founders</a></li>
-			<li><a href="http://127.0.0.1:8000/signup/">SignUp</a></li>
-			<li><a href="http://127.0.0.1:8000/login_page/">Login</a></li>
+			<li><a href="#personal_information">Personal information</a></li>
+			<li><a href="routes.html">Routes</a></li>
+			<li><a href="">LogOut</a></li>
 		</ul>
 	</div>
 	<div id="gif_area">	
+		
 		<p class="image1">
 				<img id="img1" src="logo_cyclist.gif" width=100" height="100"  alt="bike"/>
 			</p>
 	</div>
+	<a id="personal_information"></a>
 	<article class="main">
 		<h1>Personal information</h1>
+		<!--<p class="avatar">
+				<img id="img1" src="avatar.png" width="100" height="100" alt="Avatar"/>-->
+		<p class="avatar">
+		<img id="img3" src="avatar.png" width="100" height="100" alt="Avatar"/>
+		</p> <br><br><br>
 		<p>
-			sth
+			First Name: <br>
+			Last Name: <br>
+			email: 
 		</p>
 		
+			
+		
+		
 	</article>
+	<!--<img src="avatar.png" width="100" height="100" alt="Avatar" class="avatar">-->	
 
 </body>
 
