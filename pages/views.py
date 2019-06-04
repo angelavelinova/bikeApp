@@ -10,7 +10,7 @@ from .forms import SignUpForm
 
 from django.contrib.auth.models import User
 from django.contrib.auth.views import login
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm, UserChangeForm
 
 
 
@@ -58,12 +58,18 @@ def profile_view(request):
     return render(request, 'Profile/profile.html', kwargs)
 
 def data_view(request):
-    return render(request, 'Data/data.html', {})
+    if request.method == 'POST':
+        user_form=UserChangeForm(request.POST, instance = request.user)
+        if user_form.is_valid():
+            user_form.save()
+            return redirect('profile')
+
+    else:
+        user_form=UserChangeForm(instance = request.user)
+        context={
+            'form':user_form
+        }
+        return render(request, 'Data/data.html', context)
 
 def marshrutes_view(request):
     return render(request, 'Marshrutes/marshrutes.html', {})
-
-
-#it works but it's not needed, it makes page for every profile in the database
-#def profile_dynamic_view(request, user):
-#    return render(request, 'Profile/profile.html', {'user':user})
