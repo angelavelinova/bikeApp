@@ -28,7 +28,7 @@ def start_page_view(request,*args, **kwargs):
 
 def signup(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = SignUpForm(request.POST)
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
@@ -45,6 +45,7 @@ def login_view(request):
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
             user = form.get_user()
+            print(user.email)
             login(request, user)
             return redirect('profile')
             #return redirect('profile2', user=user)
@@ -53,7 +54,8 @@ def login_view(request):
     return render(request, 'Login/login_page.html', {'form': form})
 
 def profile_view(request):
-    return render(request, 'Profile/profile.html', {})
+    kwargs = {'user':request.user}
+    return render(request, 'Profile/profile.html', kwargs)
 
 def data_view(request):
     return render(request, 'Data/data.html', {})
